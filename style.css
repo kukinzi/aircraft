@@ -1,0 +1,66 @@
+#game-container {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  border: 1px solid #000;
+  margin: 0 auto;
+  z-index: 1; /* Ensure game container is rendered above the airplane */
+}
+
+#airplane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bullet {
+  width: 5px;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+  z-index: 3; /* Ensure bullets are rendered above the airplane */
+}
+
+.enemy {
+  width: 35px;
+  height: 35px;
+  background-color: blue;
+  position: absolute;
+  z-index: 2; /* Ensure enemy aircraft are rendered above the game container and below the bullets */
+}
+
+.enemy2 {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 0, 225);
+  position: absolute;
+  z-index: 2;
+}
+
+#bullet-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800px; /* Same as game-container width */
+  height: 600px; /* Same as game-container height */
+  z-index: 2; /* Ensure bullets are rendered above the airplane and game container border */
+}
+
+.gameover {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  z-index: 10;
+  background-color: crimson;
+  }
+
+.gamepass {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  z-index: 10;
+  background-color: chartreuse
+}
